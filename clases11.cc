@@ -108,7 +108,7 @@ public:
         cout<<numerador<<"/"<<denominador<<endl;
         simplificar();
     }
-    void multiplicacion(Racional rac1, Racional rac2){
+    void multiplicacion(Racional r1, Racional r2){
         double numerador1=r1.numerador;
         double denominador1=r1.denominador;
         double numerador2=r2.numerador;
