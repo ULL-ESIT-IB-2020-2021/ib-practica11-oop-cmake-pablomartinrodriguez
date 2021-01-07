@@ -128,6 +128,19 @@ public:
         cout<<numerador<<"/"<<denominador<<endl;
         simplificar();
     }
+        void media(Racional r1, Racional r2){
+        double numerador1=r1.numerador;
+        double denominador1=r1.denominador;
+        double numerador2=r2.numerador;
+        double denominador2=r2.denominador;
+        numerador = denominador2 * numerador1 + denominador1 * numerador2;
+        denominador = denominador1 * denominador2;
+        double abajo;
+        abajo=denominador * 2;
+        cout<<numerador<<"/"<<abajo<<endl;
+        simplificar();
+    }
+};
 };
 
 int main(){
@@ -152,5 +165,6 @@ int main(){
     total.resta(numerador,denominador);
     total.multiplicacion(numerador,denominador);
     total.division(numerador,denominador);
+    total.media(numerador,denominador);
     return 0;
 }
