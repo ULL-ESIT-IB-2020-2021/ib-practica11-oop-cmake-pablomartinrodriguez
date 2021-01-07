@@ -46,21 +46,24 @@ public:
     void suma(Complejo num1, Complejo num2){
         real = num1.real + num2.real;
         imaginaria = num1.imaginaria + num2.imaginaria;
+        cout<<real<<" + "<<imaginaria<<endl;
     }
     void resta(Complejo num1, Complejo num2){
         real = num1.real - num2.real;
         imaginaria = num1.imaginaria - num2.imaginaria;
+        cout<<real<<" + "<<imaginaria<<endl;
     }
     void multiplicacion(Complejo num1, Complejo num2){
         real = num1.real * num2.real + -1 * (num1.imaginaria * num2.imaginaria);
         imaginaria = num1.imaginaria * num2.real + num1.real * num2.imaginaria;
+        cout<<real<<" + "<<imaginaria<<endl;
     }
     void division(Complejo num1, Complejo num2){
         Complejo numerocon(num2.real, -1*num2.imaginaria); 
         double denominador = pow(num1.real, 2) + pow(num2.imaginaria, 2);
         real = (num1.real * numerocon.real + -1 * (num1.imaginaria * numerocon.imaginaria)) / denominador;
         imaginaria = (num1.imaginaria * numerocon.real + num1.real * numerocon.imaginaria) / denominador;
-        cout<<num1.real * numerocon.real + -1 * (num1.imaginaria * numerocon.imaginaria) << "/" << denominador << " + " << num1.imaginaria * numerocon.real + num1.real * numerocon.imaginaria<<"/"<<denominador<<"i"<<" ~= ";
+        cout<<real<<" + "<<imaginaria<<endl;
     }
 };
 
@@ -86,43 +89,43 @@ public:
 
     }
     void suma(Racional r1, Racional r2){
-        cout<<r1.numerador<<"/"<<r1.denominador<< "+"<<r2.numerador<<"/"<<r2.denominador<<"=";
         double numerador1=r1.numerador;
         double denominador1=r1.denominador;
         double numerador2=r2.numerador;
         double denominador2=r2.denominador;
         numerador = denominador2 * numerador1 + denominador1 * numerador2;
         denominador = denominador1 * denominador2;
+        cout<<numerador<<"/"<<denominador<<endl;
         simplificar();
     }
     void resta(Racional r1, Racional r2){
-        cout<<r1.numerador<<"/"<<r1.denominador<<"-"<<r2.numerador<<"/"<<r2.denominador<<"=";
         double numerador1=r1.numerador;
         double denominador1=r1.denominador;
         double numerador2=r2.numerador;
         double denominador2=r2.denominador;
         numerador=denominador2 * numerador1 - denominador1 * numerador2;
         denominador=denominador1 * denominador2;
+        cout<<numerador<<"/"<<denominador<<endl;
         simplificar();
     }
     void multiplicacion(Racional rac1, Racional rac2){
-        cout<<r1.numerador<<"/"<<r1.denominador<<"*"<<r2.numerador<<"/"<<r2.denominador<<"=";
         double numerador1=r1.numerador;
         double denominador1=r1.denominador;
         double numerador2=r2.numerador;
         double denominador2=r2.denominador;
         numerador=numerador1 * numerador2;
         denominador=denominador1 * denominador2;
+        cout<<numerador<<"/"<<denominador<<endl;
         simplificar();
     }
     void dividir(Racional r1, Racional r2){
-        cout<<r1.numerador<<"/"<<r1.denominador<<"/"<<r2.numerador<<"/"<< r2.denominador<<"=";
         double numerador1=r1.numerador;
         double denominador1=r1.denominador;
         double numerador2=r2.numerador;
         double denominador2=r2.denominador;
         numerador=numerador1 * denominador2;
         denominador=numerador2 * denominador1;
+        cout<<numerador<<"/"<<denominador<<endl;
         simplificar();
     }
 };
